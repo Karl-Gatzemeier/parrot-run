@@ -22,7 +22,6 @@ public class Movement : MonoBehaviour
         body.velocity = new Vector2(runningSpeed, body.velocity.y);
 
         
-        //Animate Jump
         
         //Jump using Spacebar
         if (Input.GetKeyDown(KeyCode.Space))
@@ -37,11 +36,10 @@ public class Movement : MonoBehaviour
             //Set params for jump animation
             animator.SetBool("isJumping", false);
             animator.SetFloat("y_Velocity", Mathf.Abs(body.velocity.y));
-            
-
         }
-        
 
-        
+
+
+
     }
 }
