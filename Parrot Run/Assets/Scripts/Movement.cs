@@ -5,7 +5,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float jumpSpeed;
     [SerializeField] private LayerMask platformLayerMask;
-    private float forewardForce;
+    [SerializeField] private float forwardForce;
+    private float forwardForceVel;
 
     private Rigidbody2D body;
     private BoxCollider2D boxCollider2d;
@@ -27,14 +28,14 @@ public class Movement : MonoBehaviour
             if(transform.position.x < 0)
             {
                 //player is left to the middle -> he can jump foreward to the middle
-                forewardForce = 1f;
+                forwardForceVel = forwardForce;
             } else
             {
                 // player is in the middle -> he cant jump further
-                forewardForce = 0f;
+                forwardForceVel = 0f;
             }
 
-            body.velocity = new Vector2(forewardForce, jumpSpeed);
+            body.velocity = new Vector2(forwardForceVel, jumpSpeed);
             //Set params for jump animation
             animator.SetBool("isJumping", true);
             animator.SetFloat("y_Velocity", Mathf.Abs(body.velocity.y));

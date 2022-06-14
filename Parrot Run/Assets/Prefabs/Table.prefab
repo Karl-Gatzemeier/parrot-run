@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4277081091531255291}
   - component: {fileID: 4277081091531255288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Red Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4277081091622403433}
   - component: {fileID: 4277081091622403439}
   - component: {fileID: 4277081091622403438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,10 @@ GameObject:
   - component: {fileID: 4277081092430398819}
   - component: {fileID: 4277081092430398816}
   - component: {fileID: 4277081092430398817}
-  m_Layer: 0
+  - component: {fileID: -5616507881946778878}
+  - component: {fileID: 3742519567197476256}
+  - component: {fileID: -518558299726315820}
+  m_Layer: 8
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4277081092430398818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32, y: -1.1, z: 1.0309148}
+  m_LocalPosition: {x: 32, y: -1.1, z: -5}
   m_LocalScale: {x: 4, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -305,6 +308,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.32}
   m_EdgeRadius: 0
+--- !u!50 &-5616507881946778878
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277081092430398818}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &3742519567197476256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277081092430398818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d71c8f16803e6469cd414019d6a654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-518558299726315820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277081092430398818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff75abcd9af2a25408f33977f1c2a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleSpeed: -3
 --- !u!1 &4277081092807248805
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +365,7 @@ GameObject:
   - component: {fileID: 4277081092807248810}
   - component: {fileID: 4277081092807248811}
   - component: {fileID: 4277081092807248808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +476,7 @@ GameObject:
   - component: {fileID: 4277081093149469097}
   - component: {fileID: 4277081093149469102}
   - component: {fileID: 4277081093149469103}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4277081093435888193}
   - component: {fileID: 4277081093435888198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blue Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
