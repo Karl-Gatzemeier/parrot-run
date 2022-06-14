@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 7
-  runningSpeed: 2.5
+  runningSpeed: 0
   animator: {fileID: 7233691811320300282}
 --- !u!114 &7233691811320300285
 MonoBehaviour:
