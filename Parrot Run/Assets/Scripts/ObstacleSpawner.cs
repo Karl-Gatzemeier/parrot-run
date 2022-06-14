@@ -29,8 +29,9 @@ public class ObstacleSpawner : MonoBehaviour
 
     void InitObstacles()
     {
-        // initialize obstacles
-        for (int i = 0; i < obstacles.Length; i++)
+        // initialize obstacles -> the for loop must be greater than all objects that can appear on the screen at the same time, otherwise Unity will collapse because of infinite loop
+        // -> Thats is why i < 5 * obstcles.length
+        for (int i = 0; i < 5 * obstacles.Length; i++)
         {
             GameObject obj = Instantiate(obstacles[index], transform.position, Quaternion.identity);
             obstaclesToSpawn.Add(obj);
