@@ -21,17 +21,12 @@ public class ObstacleSpawner : MonoBehaviour
         StartCoroutine(SpawnRandomObstacle());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void InitObstacles()
     {
         // initialize obstacles -> the for loop must be greater than all objects that can appear on the screen at the same time, otherwise Unity will collapse because of infinite loop
-        // -> Thats is why i < 5 * obstcles.length
-        for (int i = 0; i < 5 * obstacles.Length; i++)
+        // -> Thats is why i < 50 * obstacles.length
+        for (int i = 0; i < 50 * obstacles.Length; i++)
         {
             GameObject obj = Instantiate(obstacles[index], transform.position, Quaternion.identity);
             obstaclesToSpawn.Add(obj);
@@ -55,7 +50,7 @@ public class ObstacleSpawner : MonoBehaviour
 
         while (true)
         {
-            if (!obstaclesToSpawn[index].activeInHierarchy)
+            if (obstaclesToSpawn[index] != null && !obstaclesToSpawn[index].activeInHierarchy)
             {
                 obstaclesToSpawn[index].SetActive(true);
                 break;

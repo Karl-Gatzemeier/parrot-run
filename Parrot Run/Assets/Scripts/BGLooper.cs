@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BGLooper : MonoBehaviour
 {
-    public float speed = 0.1f;
+    private float speed = 0.1f;
 
     private Material mat;
     private Vector2 offset = Vector2.zero;

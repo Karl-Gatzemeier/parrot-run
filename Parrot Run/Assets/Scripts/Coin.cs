@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Coin : MonoBehaviour
 {
 
     //Define Speed Obstacles move at
@@ -18,6 +18,6 @@ public class Obstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target.Translate(Vector3.left * speed * Time.deltaTime); 
+        target.Translate(Vector3.left * speed * Time.deltaTime);
     }
-}   
+}

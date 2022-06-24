@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6011543573725162228}
   - component: {fileID: 6011543573725162226}
   - component: {fileID: 6011543573725162229}
-  - component: {fileID: 5117273471426407885}
   - component: {fileID: 5936930643134189201}
   - component: {fileID: 5538785746909268807}
+  - component: {fileID: 5117273471426407885}
   m_Layer: 8
   m_Name: Single Barrel
   m_TagString: Untagged
@@ -114,19 +114,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.42, y: 0.44}
   m_EdgeRadius: 0
---- !u!114 &5117273471426407885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6011543573725162231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff75abcd9af2a25408f33977f1c2a23a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleSpeed: -3
 --- !u!50 &5936930643134189201
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +126,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 999
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -160,3 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d71c8f16803e6469cd414019d6a654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5117273471426407885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011543573725162231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff75abcd9af2a25408f33977f1c2a23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3

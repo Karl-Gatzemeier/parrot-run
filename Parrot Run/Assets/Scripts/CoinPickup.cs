@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoinPickup : MonoBehaviour
 {
 
-    private int coinValue = 5000;
+    private int coinValue = 1000;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -15,7 +15,10 @@ public class CoinPickup : MonoBehaviour
             Score.instance.AddScore(coinValue);
 
         }
-    }
 
-    
+        if(collision.tag == "ObstacleCollector")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
