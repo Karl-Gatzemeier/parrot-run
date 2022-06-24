@@ -11,15 +11,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    //Options Button Control
-    public void OpenOptionsMenu()
-    {
-
-    }
-
     //Quit Button Control
     public void QuitGame()
     {
-
+        Application.Quit();
     }
 }

@@ -8,12 +8,15 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Text coinText;
     
-    int score = 0;
-    int coins = 0;
+    static int score;
+    static int coins;
 
     private void Awake()
     {
         instance = this;
+        score = 0;
+        coins = 0;
+
     }
 
     void Start()
@@ -25,7 +28,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        AddScore(1);
+            AddScore(1); 
     }
 
     public void AddCoin()
@@ -36,8 +39,10 @@ public class Score : MonoBehaviour
 
     public void AddScore(int value)
     {
-        score += value;
-        scoreText.text = score.ToString();
+        if (!PauseMenu.isPaused) {
+            score += value;
+            scoreText.text = score.ToString();
+        }
     }
 
 }
