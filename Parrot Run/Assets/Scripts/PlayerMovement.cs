@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float jumpSpeed;
     [SerializeField] private LayerMask platformLayerMask;
@@ -17,19 +17,24 @@ public class Movement : MonoBehaviour
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
     }
 
-   
     // Update is called once per frame
     void Update()
     {
+        Jump();
+    }
+
+    void Jump()
+    {
         //Jump using Spacebar
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
-           // is player in the middle of the screen?
-            if(transform.position.x < 0)
+            // is player in the middle of the screen?
+            if (transform.position.x < 0)
             {
                 //player is left to the middle -> he can jump foreward to the middle
                 forwardForceVel = forwardForce;
-            } else
+            }
+            else
             {
                 // player is in the middle -> he cant jump further
                 forwardForceVel = 0f;
@@ -41,7 +46,8 @@ public class Movement : MonoBehaviour
             animator.SetFloat("y_Velocity", Mathf.Abs(body.velocity.y));
 
         }
-        else{
+        else
+        {
             //Set params for jump animation
             animator.SetBool("isJumping", false);
             animator.SetFloat("y_Velocity", Mathf.Abs(body.velocity.y));
@@ -50,7 +56,25 @@ public class Movement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, .1f, platformLayerMask);
+        float extraHeight = 0.1f;
+        RaycastHit2D raycastHit2d = Physics2D.Raycast(boxCollider2d.bounds.center,Vector2.down,boxCollider2d.bounds.extents.y + extraHeight,platformLayerMask);
+        Color rayColor;
+ 
+        if (raycastHit2d.collider != null)
+        {
+            rayColor = Color.green;
+        }
+        else
+        {
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + extraHeight));
         return raycastHit2d.collider != null;
     }
 }
+
+
+    
+
+       
+
