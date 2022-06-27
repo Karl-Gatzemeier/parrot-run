@@ -7,9 +7,12 @@ public class Score : MonoBehaviour
     public static Score instance;
     public Text scoreText;
     public Text coinText;
+    public Text finalScore;
+    public Text finalCoins;
+    public Image coinImage;
     
-    static int score;
-    static int coins;
+    public static int score;
+    public static int coins;
 
     private void Awake()
     {
@@ -21,8 +24,8 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = score.ToString();
-        coinText.text = "x" + coins.ToString();
+        instance.scoreText.text = score.ToString();
+        instance.coinText.text = "x" + coins.ToString();
 
     }
 
@@ -34,15 +37,26 @@ public class Score : MonoBehaviour
     public void AddCoin()
     {
         coins += 1;
-        coinText.text = "x" + coins.ToString();
+        instance.coinText.text = "x" + coins.ToString();
     }
 
     public void AddScore(int value)
     {
-        if (!PauseMenu.isPaused) {
+        //Only Add Score Points while Game is not paused or over
+        if (!PauseMenu.isPaused && !GameOverScreen.gameOver) {
             score += value;
-            scoreText.text = score.ToString();
+            instance.scoreText.text = score.ToString();
         }
+    }
+
+    //Function is Called when GameOverScreen is displayed
+    public void ShowFinalScore()
+    {
+        instance.scoreText.text = "";
+        instance.coinText.text = "";
+        instance.coinImage.enabled = false;
+        instance.finalScore.text = "Score: " + score.ToString();
+        instance.finalCoins.text = "Coins: " + coins.ToString();
     }
 
 }

@@ -58,17 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float extraHeight = 0.1f;
         RaycastHit2D raycastHit2d = Physics2D.Raycast(boxCollider2d.bounds.center,Vector2.down,boxCollider2d.bounds.extents.y + extraHeight,platformLayerMask);
-        Color rayColor;
- 
-        if (raycastHit2d.collider != null)
-        {
-            rayColor = Color.green;
-        }
-        else
-        {
-            rayColor = Color.red;
-        }
-        Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + extraHeight));
+        
         return raycastHit2d.collider != null;
     }
 }
