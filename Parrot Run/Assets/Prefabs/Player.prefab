@@ -171,6 +171,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   coinText: {fileID: 0}
+  finalScore: {fileID: 0}
+  finalCoins: {fileID: 0}
+  coinImage: {fileID: 0}
 --- !u!114 &542955621489055094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   forwardForce: 0
+  multiJumpCount: 2
   animator: {fileID: 7233691811320300282}
 --- !u!114 &6895422658618304593
 MonoBehaviour:
@@ -201,4 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf74731cb3d2bf842bd28c34b718b33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  maxHP: 3
+  currentHP: 0
+  hit: 0
+  h1: {fileID: 0}
+  h2: {fileID: 0}
+  h3: {fileID: 0}
+  animator: {fileID: 0}

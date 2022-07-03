@@ -6,11 +6,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpSpeed;
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private float forwardForce;
+    [SerializeField] private int multiJumpCount;
     private float forwardForceVel;
 
     private Rigidbody2D body;
     private BoxCollider2D boxCollider2d;
     public Animator animator;
+    private int jump_count = 0;
 
     private void Awake() {
         body = GetComponent<Rigidbody2D>();
@@ -26,8 +28,10 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         //Jump using Spacebar
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        if ((IsGrounded() || jump_count + 1 < multiJumpCount) && Input.GetKeyDown(KeyCode.Space))
         {
+            jump_count = jump_count + 1;
+            if(jump_count >= multiJumpCount || IsGrounded()) jump_count = 0;
             // is player in the middle of the screen?
             if (transform.position.x < 0)
             {
