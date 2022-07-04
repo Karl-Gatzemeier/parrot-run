@@ -8,12 +8,11 @@ public class CoinPickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
-        { 
-            Destroy(gameObject);
+        {
+            GameObject.FindGameObjectWithTag("CoinSoundBox").GetComponent<AudioSource>().Play();
             Score.instance.AddCoin();
             Score.instance.AddScore(coinValue);
-            
-
+            Destroy(gameObject);
         }
 
         if(collision.tag == "ObstacleCollector")
