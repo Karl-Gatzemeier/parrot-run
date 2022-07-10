@@ -95,4 +95,15 @@ public class PlayerCollision : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "LeftEndDeadCollider")
+        {
+            while(currentHP > 0)
+            {
+                DecreaseHP();
+            }
+        }
+    }
+
 }
