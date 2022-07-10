@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider2d;
     public Animator animator;
     private int jump_count = 0;
+    public AudioSource Jumping;
+    public AudioSource Landing;
 
     private void Awake() {
         body = GetComponent<Rigidbody2D>();
@@ -23,13 +25,20 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Jump();
+        if(!IsGrounded())
+        {
+            Landing.Play();
+        }
+
     }
 
     void Jump()
     {
+
         //Jump using Spacebar
         if ((IsGrounded() || jump_count + 1 < multiJumpCount) && Input.GetKeyDown(KeyCode.Space))
-        {
+        {   
+            Jumping.Play();
             jump_count = jump_count + 1;
             if(jump_count >= multiJumpCount || IsGrounded()) jump_count = 0;
             // is player in the middle of the screen?

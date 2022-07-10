@@ -20,6 +20,9 @@ public class PlayerCollision : MonoBehaviour
     private BoxCollider2D boxCollider2d;
     public Animator animator;
 
+    public AudioSource Damage;
+    public AudioSource Death;
+
     private void Awake()
     {
         pc = this;
@@ -77,14 +80,17 @@ public class PlayerCollision : MonoBehaviour
     {
         if(currentHP == 0)
         {
+            Death.Play();
             pc.h1.enabled = false;
         }
         if (currentHP == 1)
         {
+            Damage.Play();
             pc.h2.enabled = false;
         }
         if (currentHP == 2)
         {
+            Damage.Play();
             pc.h3.enabled = false;
         }
     }
