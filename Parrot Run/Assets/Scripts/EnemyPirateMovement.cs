@@ -22,9 +22,10 @@ public class EnemyPirateMovement : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
-            movement = new Vector2(Random.Range(-1f, 1f), 0);
+            movement = new Vector2(Random.Range(-1f, 0f), 0);
             timeLeft += accelerationTime;
             
+
         }
     }
     

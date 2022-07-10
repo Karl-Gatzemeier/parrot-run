@@ -207,7 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 3
   currentHP: 0
-  hit: 0
   h1: {fileID: 0}
   h2: {fileID: 0}
   h3: {fileID: 0}
