@@ -6,6 +6,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
 
     public GameObject[] obstacles;
+    public GameObject parrot;
     public List<GameObject> obstaclesToSpawn = new List<GameObject>();
 
     int index;
@@ -50,7 +51,15 @@ public class ObstacleSpawner : MonoBehaviour
 
         while (true)
         {
-            if (obstaclesToSpawn[index] != null && !obstaclesToSpawn[index].activeInHierarchy)
+            if (Score.score > 20000)
+            {
+                // wait for some time till parrot is spawned
+                yield return new WaitForSeconds(5f);
+                GameObject parrotObject = Instantiate(parrot, transform.position, Quaternion.identity);
+                parrotObject.SetActive(true);
+                yield return new WaitForSeconds(150f);
+            }
+            else if (obstaclesToSpawn[index] != null && !obstaclesToSpawn[index].activeInHierarchy)
             {
                 obstaclesToSpawn[index].SetActive(true);
                 break;

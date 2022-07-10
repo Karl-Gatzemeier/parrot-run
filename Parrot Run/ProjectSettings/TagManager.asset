@@ -8,8 +8,10 @@ TagManager:
   - Coin
   - CoinSoundBox
   - LeftEndDeadCollider
+  - parrot
   - Obstacle
   - MovingObstacle
+
   layers:
   - Default
   - TransparentFX

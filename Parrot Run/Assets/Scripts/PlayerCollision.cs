@@ -104,6 +104,15 @@ public class PlayerCollision : MonoBehaviour
                 DecreaseHP();
             }
         }
+
+        if (other.tag == "parrot")
+        {
+            // ÄNDERN! Hier muss GameWon() hin!
+            while (currentHP > 0)
+            {
+                DecreaseHP();
+            }
+        }
     }
 
 }

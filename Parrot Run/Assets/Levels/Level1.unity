@@ -657,6 +657,7 @@ MonoBehaviour:
   - {fileID: 6011543573725162231, guid: 6cf1696aae28f8042a39acd7b0cfa54a, type: 3}
   - {fileID: 229662813034489246, guid: 8a4bfc15f1ee1db469919d495200c6d8, type: 3}
   - {fileID: 4277081092430398818, guid: 8af788d7196ffa14dbb235d0c4b39ac1, type: 3}
+  parrot: {fileID: 0}
   obstaclesToSpawn: []
 --- !u!4 &301183984
 Transform:
@@ -2717,6 +2718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 8389543720373401101, guid: 2c065a5d8cc14d146a0b5cb33fc5410d, type: 3}
+  parrot: {fileID: 0}
   obstaclesToSpawn: []
 --- !u!4 &1173348139
 Transform:
