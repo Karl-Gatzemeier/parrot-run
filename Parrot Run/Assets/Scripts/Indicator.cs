@@ -8,22 +8,21 @@ public class Indicator : MonoBehaviour
     public EdgeCollider2D onEdge;
     public EdgeCollider2D offEdge;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Update()
     {
-        StartCoroutine(WaitSomeSeconds(collision)); 
     }
 
-    IEnumerator WaitSomeSeconds(Collider2D collision)
-    {  
-        if(collision.gameObject.tag == "Obstacle")
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Obstacle")
         {
-            SpriteRenderer.color = new Color(0f, 255f, 90f, 0.6f);
+            Debug.Log("Hit");
         }
-        else if(collision.gameObject.tag == "EnemyPirate")
+        else if(collider.gameObject.tag == "MovingObstacle")
         {
-           SpriteRenderer.color = new Color(255f, 0f, 22f, 0.6f);
+            Debug.Log("Hit");
         }
-        yield return new WaitForSeconds(1.6f);
-        SpriteRenderer.color = new Color(0.3f, 0.4f, 0f, 0f);
     }
+    
+    
 }

@@ -110,7 +110,11 @@ public class PlayerCollision : MonoBehaviour
 
         if (other.tag == "parrot")
         {
-            EndScreen.foundParrot = true;
+            // ÄNDERN! Hier muss GameWon() hin!
+            while (currentHP > 0)
+            {
+                DecreaseHP();
+            }
         }
     }
 
