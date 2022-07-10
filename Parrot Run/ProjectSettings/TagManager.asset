@@ -11,8 +11,7 @@ TagManager:
   - parrot
   - Obstacle
   - MovingObstacle
-  - EnemyPirate
-  - interactable
+
   layers:
   - Default
   - TransparentFX
@@ -22,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Platforms
+  - Indicator
   - 
   - 
   - 

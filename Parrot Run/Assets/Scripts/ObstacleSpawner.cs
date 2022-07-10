@@ -51,7 +51,6 @@ public class ObstacleSpawner : MonoBehaviour
 
         while (true)
         {
-
             if (Score.score > spawnParrotAtScore)
             {
                 // wait for some time till parrot is spawned
