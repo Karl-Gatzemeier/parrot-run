@@ -10,10 +10,10 @@ public class PlayerCollision : MonoBehaviour
     public static PlayerCollision pc;
     public int maxHP = 3;
     public int currentHP;
-    public bool hit = false;
     public Image h1;
     public Image h2;
     public Image h3;
+    public Image hpBanner;
 
 
     private Rigidbody2D body;
@@ -35,25 +35,29 @@ public class PlayerCollision : MonoBehaviour
         currentHP = maxHP;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            DecreaseHP();
-        }
-    }
+   
 
     private void LateUpdate()
     {
-        hit = false;
         animator.SetBool("hit", false);
+    }
+
+
+
+    //Decreases hp if hit by enemny
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        
+        if(other.collider.tag == "EnemyPirate")
+        {
+            DecreaseHP();
+        }
+        
     }
 
     //Decrease HP if hit, should hp be 0 -> game over
     void DecreaseHP()
     {
-        hit = true;
         animator.SetBool("hit", true);
         currentHP--;
 
@@ -61,7 +65,6 @@ public class PlayerCollision : MonoBehaviour
         {
             animator.SetInteger("hp", currentHP);
             removeHeart(currentHP);
-            Debug.Log(currentHP);
         }
         else
         {
@@ -73,7 +76,6 @@ public class PlayerCollision : MonoBehaviour
     void GameOver()
     {
         GameOverScreen.gameOver = true;
-        Debug.Log("Deadge");
     }
 
     void removeHeart(int currentHP)
@@ -82,6 +84,7 @@ public class PlayerCollision : MonoBehaviour
         {
             Death.Play();
             pc.h1.enabled = false;
+            pc.hpBanner.enabled = false;
         }
         if (currentHP == 1)
         {

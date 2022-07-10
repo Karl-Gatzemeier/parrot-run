@@ -28,6 +28,7 @@ public class GameOverScreen : MonoBehaviour
         Time.timeScale = 1f;
         gameOver = false;
         Score.instance.coinImage.enabled = true;
+        PlayerCollision.pc.hpBanner.enabled = true;
         PlayerCollision.pc.h1.enabled = true;
         PlayerCollision.pc.h2.enabled = true;
         PlayerCollision.pc.h3.enabled = true;
