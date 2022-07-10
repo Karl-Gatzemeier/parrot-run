@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-
+    [SerializeField] int spawnParrotAtScore;
     public GameObject[] obstacles;
     public GameObject parrot;
     public List<GameObject> obstaclesToSpawn = new List<GameObject>();
@@ -51,7 +51,8 @@ public class ObstacleSpawner : MonoBehaviour
 
         while (true)
         {
-            if (Score.score > 2000000)
+
+            if (Score.score > spawnParrotAtScore)
             {
                 // wait for some time till parrot is spawned
                 yield return new WaitForSeconds(5f);
