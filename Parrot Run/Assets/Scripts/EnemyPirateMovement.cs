@@ -10,11 +10,11 @@ public class EnemyPirateMovement : MonoBehaviour
     private float timeLeft;
     private Rigidbody2D rb;
     public Animator enemyAnimator;
-    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        WaitOnSpawn();
 
     }
     void Update()
@@ -22,7 +22,7 @@ public class EnemyPirateMovement : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
-            movement = new Vector2(Random.Range(-1f, 0f), 0);
+            movement = new Vector2(Random.Range(-1f, 1f), 0);
             timeLeft += accelerationTime;
             
 
@@ -32,5 +32,10 @@ public class EnemyPirateMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(movement * maxSpeed);
+    }
+
+    IEnumerator WaitOnSpawn()
+    {
+        yield return new WaitForSeconds(4);
     }
 }
