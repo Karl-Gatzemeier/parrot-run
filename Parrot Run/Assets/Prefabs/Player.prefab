@@ -211,4 +211,5 @@ MonoBehaviour:
   h1: {fileID: 0}
   h2: {fileID: 0}
   h3: {fileID: 0}
-  animator: {fileID: 0}
+  hpBanner: {fileID: 0}
+  animator: {fileID: 7233691811320300282}

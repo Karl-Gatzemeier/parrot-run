@@ -14,6 +14,7 @@ public class PlayerCollision : MonoBehaviour
     public Image h1;
     public Image h2;
     public Image h3;
+    public Image hpBanner;
 
 
     private Rigidbody2D body;
@@ -78,6 +79,7 @@ public class PlayerCollision : MonoBehaviour
         if(currentHP == 0)
         {
             pc.h1.enabled = false;
+            pc.hpBanner.enabled = false;
         }
         if (currentHP == 1)
         {
