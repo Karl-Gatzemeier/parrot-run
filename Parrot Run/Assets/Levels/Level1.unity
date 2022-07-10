@@ -780,6 +780,7 @@ MonoBehaviour:
   - {fileID: 4277081092430398818, guid: 8af788d7196ffa14dbb235d0c4b39ac1, type: 3}
   - {fileID: 6011543573725162231, guid: 2190e3a79795727488b5e8fd1ae3e628, type: 3}
   - {fileID: 5254627627317320521, guid: 87baf6191d74d1f4d8d2db11e2d0448a, type: 3}
+  - {fileID: 3798906301607069455, guid: 81c6dc85bb913c545b3a037eac16f424, type: 3}
   parrot: {fileID: 5433001978459951537, guid: b6b4d7016e4c14249a3af498ae53f8f6, type: 3}
   obstaclesToSpawn: []
 --- !u!4 &301183984
@@ -3366,7 +3367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1196875900}
   - component: {fileID: 1196875902}
-  - component: {fileID: 1196875901}
+  - component: {fileID: 1196875903}
   m_Layer: 5
   m_Name: Message
   m_TagString: Untagged
@@ -3389,28 +3390,25 @@ RectTransform:
   m_Father: {fileID: 2063953970}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1173348140
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 181, y: 82}
   m_SizeDelta: {x: 1000, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1196875901
+--- !u!222 &1196875902
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196875899}
+  m_CullTransparentMesh: 1
+--- !u!114 &1196875903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-
-  m_GameObject: {fileID: 1173348137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116bd3a9394f51e42b200082987c9a4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins:
-  - {fileID: 8389543720373401101, guid: 2c065a5d8cc14d146a0b5cb33fc5410d, type: 3}
-  coinsToSpawn: []
   m_GameObject: {fileID: 1196875899}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3418,7 +3416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.995283, b: 0.995283, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3438,16 +3436,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arr... Thank you Jack... Well Done... finally you are here to rescue me
-    from this filthy ship... Let's go get some rum!
---- !u!222 &1196875902
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196875899}
-  m_CullTransparentMesh: 1
+  m_Text: "Arr... Thank you Jack... Well Done... finally you are here to rescue me\r\n   
+    from this filthy ship... Let's go get some rum!"
 --- !u!1 &1221008236
 GameObject:
   m_ObjectHideFlags: 0
