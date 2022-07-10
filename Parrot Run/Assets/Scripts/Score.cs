@@ -9,6 +9,8 @@ public class Score : MonoBehaviour
     public Text coinText;
     public Text finalScore;
     public Text finalCoins;
+    public Text winningScore;
+    public Text winningCoins;
     public Image coinImage;
     
     public static int score;
@@ -43,7 +45,7 @@ public class Score : MonoBehaviour
     public void AddScore(int value)
     {
         //Only Add Score Points while Game is not paused or over
-        if (!PauseMenu.isPaused && !GameOverScreen.gameOver) {
+        if (!PauseMenu.isPaused && !GameOverScreen.gameOver && !EndScreen.foundParrot) {
             score += value;
             instance.scoreText.text = score.ToString();
         }
@@ -57,6 +59,15 @@ public class Score : MonoBehaviour
         instance.coinImage.enabled = false;
         instance.finalScore.text = "Score: " + score.ToString();
         instance.finalCoins.text = "Coins: " + coins.ToString();
+    }
+
+    public void ShowWinningScore()
+    {
+        instance.scoreText.text = "";
+        instance.coinText.text = "";
+        instance.coinImage.enabled = false;
+        instance.winningScore.text = "Final Score: " + score.ToString();
+        instance.winningCoins.text = "Coins collected: " + coins.ToString();
     }
 
 }
