@@ -52,6 +52,10 @@ public class PlayerCollision : MonoBehaviour
         {
             DecreaseHP();
         }
+        if(other.collider.tag == "ShootingPirate")
+        {
+            DecreaseHP();
+        }
         
     }
 
