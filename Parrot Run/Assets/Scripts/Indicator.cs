@@ -23,7 +23,11 @@ public class Indicator : MonoBehaviour
         {
            SpriteRenderer.color = new Color(255f, 0f, 22f, 0.6f);
         }
+        else if(collision.gameObject.tag == "ShootingPirate")
+        {
+           SpriteRenderer.color = new Color(0f, 0f, 0f, 0.6f);
+        }
         yield return new WaitForSeconds(1.6f);
-        SpriteRenderer.color = new Color(0.3f, 0.4f, 0f, 0f);
+        SpriteRenderer.color = new Color(0f, 0f, 0f, 0f);
     }
 }
