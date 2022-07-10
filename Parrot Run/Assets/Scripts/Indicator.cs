@@ -19,7 +19,7 @@ public class Indicator : MonoBehaviour
         {
             SpriteRenderer.color = new Color(0f, 255f, 90f, 0.6f);
         }
-        else if(collision.gameObject.tag == "MovingObstacle")
+        else if(collision.gameObject.tag == "EnemyPirate")
         {
            SpriteRenderer.color = new Color(255f, 0f, 22f, 0.6f);
         }
