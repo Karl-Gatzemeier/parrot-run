@@ -7,6 +7,11 @@ TagManager:
   - ObstacleCollector
   - Coin
   - CoinSoundBox
+  - LeftEndDeadCollider
+  - parrot
+  - Obstacle
+  - MovingObstacle
+
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - 
   - 
   - Platforms
-  - 
+  - Indicator
   - 
   - 
   - 
