@@ -698,6 +698,7 @@ MonoBehaviour:
   - {fileID: 229662813034489246, guid: 8a4bfc15f1ee1db469919d495200c6d8, type: 3}
   - {fileID: 4277081092430398818, guid: 8af788d7196ffa14dbb235d0c4b39ac1, type: 3}
   - {fileID: 6011543573725162231, guid: 2190e3a79795727488b5e8fd1ae3e628, type: 3}
+  - {fileID: 3798906301607069455, guid: 81c6dc85bb913c545b3a037eac16f424, type: 3}
   parrot: {fileID: 5433001978459951537, guid: b6b4d7016e4c14249a3af498ae53f8f6, type: 3}
   obstaclesToSpawn: []
 --- !u!4 &301183984

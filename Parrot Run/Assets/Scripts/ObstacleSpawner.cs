@@ -51,7 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
 
         while (true)
         {
-            if (Score.score > 20000)
+            if (Score.score > 200000)
             {
                 // wait for some time till parrot is spawned
                 yield return new WaitForSeconds(5f);
