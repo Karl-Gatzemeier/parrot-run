@@ -391,7 +391,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538232995}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1027,7 +1027,7 @@ RectTransform:
   m_Children:
   - {fileID: 252335485}
   m_Father: {fileID: 1538232995}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1308,7 +1308,7 @@ RectTransform:
   m_Children:
   - {fileID: 513680098}
   m_Father: {fileID: 1538232995}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1442,7 +1442,7 @@ RectTransform:
   m_Children:
   - {fileID: 554760721}
   m_Father: {fileID: 1538232995}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2103,11 +2103,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1538232995}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.702}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 206}
+  m_AnchoredPosition: {x: -12, y: 254}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450225733
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Score 50.000 Points to save me!
+  m_text: Score 50.000+ Points to save me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13a24f6cf7766eb4688078fae9644b5a, type: 2}
   m_sharedMaterial: {fileID: -3759287097418581967, guid: 13a24f6cf7766eb4688078fae9644b5a, type: 2}
@@ -2193,7 +2193,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 102.53314, z: 0, w: 100.95441}
+  m_margin: {x: 0, y: 102.53314, z: 57.475563, w: 100.95441}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2427,11 +2427,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1770199732}
-  - {fileID: 1450225732}
   - {fileID: 268488802}
   - {fileID: 764014452}
   - {fileID: 797622668}
   - {fileID: 586134110}
+  - {fileID: 1450225732}
   m_Father: {fileID: 411867775}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
