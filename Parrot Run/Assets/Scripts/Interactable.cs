@@ -26,7 +26,6 @@ public class Interactable : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Sniper Rifle in range");
             isInRange = true;
             noJump = true;
         }
@@ -37,7 +36,6 @@ public class Interactable : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Sniper Rifle out of range");
             isInRange = false;
             noJump = false;
         }

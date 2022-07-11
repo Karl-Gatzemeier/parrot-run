@@ -13,6 +13,8 @@ TagManager:
   - MovingObstacle
   - EnemyPirate
   - interactable
+  - ShootingPirate
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
