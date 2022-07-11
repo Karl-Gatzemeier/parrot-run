@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public bool isInRange;
+    public static bool noJump = false;
     public UnityEvent interactAction;
     
     void Update()
@@ -14,19 +15,20 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Sniper Rifle shoot");
                 interactAction.Invoke();
             }
         }
     }
-    
+
+
     // Enter range of trigger
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Sniper Rifle in range");
-            isInRange = true;            
+            isInRange = true;
+            noJump = true;
         }
     }
 
@@ -37,6 +39,7 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Sniper Rifle out of range");
             isInRange = false;
+            noJump = false;
         }
     }
 }
