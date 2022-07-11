@@ -14,7 +14,7 @@ public class EndScreen : MonoBehaviour
         {
             //Wait a second before showing the end screen
             Score.instance.ShowWinningScore();
-            Invoke("showEndScreen", 1.5f);
+            showEndScreen();
         }
     }
 

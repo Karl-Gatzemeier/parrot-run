@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //Jump using Spacebar
-        if ((IsGrounded() || jump_count + 1 < multiJumpCount) && Input.GetKeyDown(KeyCode.Space))
+        if ((IsGrounded() || jump_count + 1 < multiJumpCount) && Input.GetKeyDown(KeyCode.Space)&& !Interactable.noJump)
         {   
             Jumping.Play();
             jump_count = jump_count + 1;

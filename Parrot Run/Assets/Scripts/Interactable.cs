@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public bool isInRange;
+    public static bool noJump = false;
     public UnityEvent interactAction;
     
     void Update()
@@ -18,13 +19,15 @@ public class Interactable : MonoBehaviour
             }
         }
     }
-    
+
+
     // Enter range of trigger
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            isInRange = true;            
+            isInRange = true;
+            noJump = true;
         }
     }
 
@@ -34,6 +37,7 @@ public class Interactable : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             isInRange = false;
+            noJump = false;
         }
     }
 }
