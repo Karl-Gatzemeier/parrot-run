@@ -14,7 +14,6 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Sniper Rifle shoot");
                 interactAction.Invoke();
             }
         }
@@ -25,7 +24,6 @@ public class Interactable : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Sniper Rifle in range");
             isInRange = true;            
         }
     }
@@ -35,7 +33,6 @@ public class Interactable : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Sniper Rifle out of range");
             isInRange = false;
         }
     }

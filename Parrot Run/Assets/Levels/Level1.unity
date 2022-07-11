@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5bd354f5271d94b8a239464c7cb304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnParrotAtScore: 1
+  spawnParrotAtScore: 100000
   obstacles:
   - {fileID: 6011543573725162231, guid: 6cf1696aae28f8042a39acd7b0cfa54a, type: 3}
   - {fileID: 229662813034489246, guid: 8a4bfc15f1ee1db469919d495200c6d8, type: 3}

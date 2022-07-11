@@ -112,6 +112,12 @@ public class PlayerCollision : MonoBehaviour
             }
         }
 
+        if (other.tag == "EnemyBullet")
+        {
+            DecreaseHP();
+            other.gameObject.SetActive(false);
+        }
+
         if (other.tag == "parrot")
         {
             EndScreen.foundParrot = true;
