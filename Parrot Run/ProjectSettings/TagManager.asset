@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ObstacleCollector
+  - Coin
+  - CoinSoundBox
+  - LeftEndDeadCollider
+  - parrot
+  - Obstacle
+  - MovingObstacle
+  - EnemyPirate
+  - interactable
+  - ShootingPirate
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
